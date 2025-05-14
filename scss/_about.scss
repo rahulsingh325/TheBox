@@ -53,27 +53,27 @@
         @media (max-width: 992px) {
             .about-card {
                 width: 100%;
-                /* or any other width value you prefer */
+                
                 margin: 20px auto;
-                /* add some margin to center the card */
+                
             }
         }
 
         @media (max-width: 576px) {
             .card-title {
                 font-size: $h5-font-size
-                /* Adjust as needed */
+                
             }
 
             .card-text {
                 font-size: $h7-font-size;
-                /* Adjust as needed */
+                
             }
 
             .about-card .btn {
                 font-size: $h7-font-size
-                /* Adjust as needed */
-                /* Adjust padding if needed */
+                
+                
             }
         }
         @media (max-width: 768px) {

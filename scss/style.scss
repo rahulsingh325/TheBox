@@ -33,20 +33,25 @@ $custom-theme-colors: (
     "border-light": $border-light,
 );
 
+//  nav-bar custmization
+
 $nav-link-color: #14171F;
 $nav-link-hover-color: $accent-orange;
 $link-decoration: none;
 
+// font customization
 
 $font-family-base: work-sans, sans-serif;
 $font-size-base: 1rem;
 
+// container customization
 
 $custom-container-max-widths: (
     xl: 1150px,
     xxl: 1232px,
 );
 
+// spacer customization
 
 $spacer: 1rem;
 $spacers: (
@@ -69,7 +74,8 @@ $spacers: (
 
 
 
-// need to make varieble for slider
+// font size customization
+
 $font-size-base: 1rem;
 
 $h1-font-size: min(72px, calc($font-size-base + 4.5vw));
@@ -87,17 +93,18 @@ $custom-font-size: (
 );
 
 
-
+// 
 @import '../node_modules/bootstrap/scss/functions';
 @import '../node_modules/bootstrap/scss/variables';
 
-
+// maping
 $theme-colors: map-merge($map1: $theme-colors, $map2: $custom-theme-colors);
 $container-max-widths: map-merge($container-max-widths, $custom-container-max-widths);
 
 $font-sizes: map-merge($font-sizes, $custom-font-size); // Now $font-sizes is defined
 
 
+// creating mixins
 
 @mixin hover-effect($color: $accent-orange, $scale: 1.1) {
     transition: transform 0.2s, color 0.2s, filter 0.2s;
@@ -120,10 +127,12 @@ $font-sizes: map-merge($font-sizes, $custom-font-size); // Now $font-sizes is de
 
 
 
+// Importing Bootstrap's core styles
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss'; // Import Bootstrap first
 
 
+// Import custom styles
 
 @import './header.scss';
 @import './hero.scss';
